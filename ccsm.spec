@@ -33,6 +33,10 @@ Requires(postun): desktop-file-utils
 Requires: compizconfig-python
 Requires: pygtk2.0
 
+Obsoletes: gset-compiz
+Obsoletes: beryl-settings
+Obsoletes: beryl-settings-simple
+
 %description
 Compiz Config Settings Manager
 
