@@ -1,7 +1,7 @@
 %define name ccsm
 %define version 0.1.0
 %define rel 1
-%define git 20070724
+%define git 20070801
 
 %if  %{git}
 %define srcname %{name}-%{git}
@@ -46,17 +46,14 @@ Compiz Config Settings Manager
 %setup -q -n %{distname}
 
 %build
-%if %{git}
-  # This is a GIT snapshot, so we need to generate makefiles.
-  sh autogen.sh -V
-%endif
-%configure2_5x --disable-mime-update
-%make
+PREFIX=%{_prefix} %make
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+PREFIX=%{buildroot}%{_prefix} %makeinstall_std
+rm -f %{buildroot}%{py_puresitedir}/*.egg-info
 %find_lang %{name}
+
 
 desktop-file-install \
   --vendor="" \
@@ -84,6 +81,9 @@ rm -rf %{buildroot}
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/images
 %{_datadir}/%{name}/images/*.svg
+%dir %{py_puresitedir}/ccm
+%{py_puresitedir}/ccm/*.py
+%{py_puresitedir}/ccm/*.pyc
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
