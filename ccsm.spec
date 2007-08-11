@@ -1,7 +1,7 @@
 %define name ccsm
 %define version 0.1.0
 %define rel 1
-%define git 20070801
+%define git 20070811
 
 %if  %{git}
 %define srcname %{name}-%{git}
@@ -22,6 +22,7 @@ URL: http://www.compiz-fusion.org/
 Source: %{srcname}.tar.bz2
 License: GPL
 BuildRoot: %{_tmppath}/%{name}-root
+BuildArch: noarch
 BuildRequires: compiz-devel
 BuildRequires: compizconfig-python-devel
 BuildRequires: pygtk2.0-devel
@@ -46,11 +47,11 @@ Compiz Config Settings Manager
 %setup -q -n %{distname}
 
 %build
-PREFIX=%{_prefix} %make
+python setup.py build --prefix=%{_prefix}
 
 %install
 rm -rf %{buildroot}
-PREFIX=%{buildroot}%{_prefix} %makeinstall_std
+python setup.py install --prefix=%{_prefix} --root=%{buildroot}
 rm -f %{buildroot}%{py_puresitedir}/*.egg-info
 %find_lang %{name}
 
