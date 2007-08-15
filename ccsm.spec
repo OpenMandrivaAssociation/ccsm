@@ -61,7 +61,7 @@ desktop-file-install \
   --remove-category="Settings" \
   --add-category="X-MandrivaLinux-System-Configuration-Other" \
   --dir %{buildroot}%{_datadir}/applications \
-  ${buildroot}%{_datadir}/applications/%{name}.desktop
+  %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %clean
 rm -rf %{buildroot}
