@@ -1,6 +1,6 @@
 %define name ccsm
 %define version 0.5.2
-%define rel 1
+%define rel 2
 %define git 0
 
 %if  %{git}
@@ -58,8 +58,11 @@ rm -f %{buildroot}%{py_puresitedir}/*.egg-info
 
 desktop-file-install \
   --vendor="" \
-  --remove-category="Settings" \
-  --add-category="X-MandrivaLinux-System-Configuration-Other" \
+  --remove-category="Compiz" \
+  --add-category="GTK" \
+  --add-category="Settings" \
+  --add-category="DesktopSettings" \
+  --add-category="X-MandrivaLinux-CrossDesktop" \
   --dir %{buildroot}%{_datadir}/applications \
   %{buildroot}%{_datadir}/applications/%{name}.desktop
 
