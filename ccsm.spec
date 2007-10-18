@@ -1,7 +1,7 @@
 %define name ccsm
-%define version 0.5.2
-%define rel 2
-%define git 0
+%define version 0.6.0
+%define rel 1
+%define git 20071018
 
 %if  %{git}
 %define srcname %{name}-%{git}
