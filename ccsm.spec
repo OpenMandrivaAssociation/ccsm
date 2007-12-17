@@ -21,7 +21,6 @@ Group: System/X11
 URL: http://www.compiz-fusion.org/
 Source: %{srcname}.tar.bz2
 License: GPL
-BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
 BuildRequires: compiz-devel
 BuildRequires: compizconfig-python-devel
