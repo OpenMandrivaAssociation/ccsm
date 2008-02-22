@@ -1,6 +1,6 @@
 %define name ccsm
 %define version 0.6.99
-%define rel 1
+%define rel 2
 %define git 20080218
 
 %if  %{git}
@@ -33,6 +33,7 @@ Requires(postun): desktop-file-utils
 
 Requires: compizconfig-python
 Requires: pygtk2.0
+Suggests: python-sexy
 
 Obsoletes: gset-compiz
 Obsoletes: beryl-settings
