@@ -1,7 +1,7 @@
 %define name ccsm
-%define version 0.6.99
-%define rel 2
-%define git 20080218
+%define version 0.7.2
+%define rel 1
+%define git 0
 
 %if  %{git}
 %define srcname %{name}-%{git}
@@ -93,4 +93,5 @@ rm -rf %{buildroot}
 %{py_puresitedir}/ccm/*.pyc
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.svg
 %{_datadir}/applications/%{name}.desktop
