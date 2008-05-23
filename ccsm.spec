@@ -40,7 +40,7 @@ Obsoletes: beryl-settings
 Obsoletes: beryl-settings-simple
 
 %description
-Compiz Config Settings Manager
+Configuration tool for Compiz when used with the ccp configuration plugin (default).
 
 #----------------------------------------------------------------------------
 
