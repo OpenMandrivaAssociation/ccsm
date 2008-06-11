@@ -80,8 +80,6 @@ rm -rf %{buildroot}
 %clean_desktop_database
 %clean_icon_cache hicolor
 
-#----------------------------------------------------------------------------
-
 %files -f %{name}.lang
 %defattr(-,root,root)
 %{_bindir}/%{name}
