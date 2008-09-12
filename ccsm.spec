@@ -1,7 +1,7 @@
 %define name ccsm
-%define version 0.7.7
+%define version 0.7.8
 %define rel 1
-%define git 20080713
+%define git 20080912
 
 %if  %{git}
 %define srcname %{name}-%{git}
@@ -57,6 +57,7 @@ rm -f %{buildroot}%{py_puresitedir}/*.egg-info
 %find_lang %{name}
 
 
+sed -i 's/StartupNotify=yes/StartupNotify=true/' %{buildroot}%{_datadir}/applications/%{name}.desktop
 desktop-file-install \
   --vendor="" \
   --remove-category="Compiz" \
