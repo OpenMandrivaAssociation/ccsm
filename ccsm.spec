@@ -1,6 +1,6 @@
 %define name ccsm
 %define version 0.8.4
-%define rel 2
+%define rel 3
 %define git 0
 
 %if  %{git}
@@ -80,7 +80,6 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}/icons
 %dir %{py_puresitedir}/ccm
 %{py_puresitedir}/ccm/*.py
-%{py_puresitedir}/ccm/*.pyc
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_datadir}/icons/hicolor/*/apps/%{name}.svg
