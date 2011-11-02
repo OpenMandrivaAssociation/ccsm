@@ -21,16 +21,13 @@ Source: http://releases.compiz.org/%{version}/%{srcname}
 License: GPL
 
 BuildArch: noarch
-BuildRequires: compiz-devel >= %{version}
-BuildRequires: compizconfig-python-devel >= %{version}
-BuildRequires: pygtk2.0-devel
-BuildRequires: intltool
 BuildRequires: desktop-file-utils
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 
 Requires: compizconfig-python
 Requires: pygtk2.0
+### Is this really needed???
 Suggests: python-sexy
 
 Obsoletes: gset-compiz
