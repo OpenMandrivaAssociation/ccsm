@@ -1,27 +1,25 @@
-%define name ccsm
-%define version 0.8.4
-%define rel 4
+%define rel 1
 %define git 0
 
 %if  %{git}
 %define srcname %{name}-%{git}.tar.lzma
 %define distname %{name}
-%define release %mkrel 0.%{git}.%{rel}
+%define release 0.%{git}.%{rel}
 %else
 %define srcname %{name}-%{version}.tar.bz2
 %define distname %{name}-%{version}
-%define release %mkrel %{rel}
+%define release %{rel}
 %endif
 
-Name: %name
-Version: %version
+Name: ccsm
+Version: 0.9.5.92
 Release: %release
 Summary: Compiz Config Settings Manager
 Group: System/X11
-URL: http://www.compiz-fusion.org/
-Source: http://releases.compiz-fusion.org/%{version}/%{srcname}
+URL: http://www.compiz.org/
+Source: http://releases.compiz.org/%{version}/%{srcname}
 License: GPL
-BuildRoot: %{_tmppath}/%{name}-root
+
 BuildArch: noarch
 BuildRequires: compiz-devel >= %{version}
 BuildRequires: compizconfig-python-devel >= %{version}
@@ -45,7 +43,7 @@ Configuration tool for Compiz when used with the ccp configuration plugin (defau
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n %{distname}
+%setup -qn %{distname}
 
 %build
 python setup.py build --prefix=%{_prefix}
