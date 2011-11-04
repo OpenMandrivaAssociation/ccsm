@@ -22,6 +22,7 @@ License: GPL
 
 BuildArch: noarch
 BuildRequires: desktop-file-utils
+BuildRequires: python
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 
