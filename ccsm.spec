@@ -1,6 +1,6 @@
 Name:		ccsm
 Version:	0.9.5.92
-Release:	2
+Release:	3
 Summary:	Compiz Config Settings Manager
 Group:		System/X11
 URL:		http://www.compiz.org/
@@ -20,7 +20,8 @@ Requires:	pygtk2.0
 Suggests:	python-sexy
 
 %description
-Configuration tool for Compiz when used with the ccp configuration plugin (default).
+Configuration tool for Compiz when used with the ccp configuration plugin
+(default).
 
 #----------------------------------------------------------------------------
 
