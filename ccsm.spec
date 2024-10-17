@@ -3,7 +3,7 @@ Version:	0.9.5.92
 Release:	3
 Summary:	Compiz Config Settings Manager
 Group:		System/X11
-URL:		http://www.compiz.org/
+URL:		https://www.compiz.org/
 Source:		http://releases.compiz.org/%{version}/%{name}-%{version}.tar.bz2
 License:	GPL
 
