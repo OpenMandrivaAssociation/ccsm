@@ -1,6 +1,6 @@
 Name:		ccsm
 Version:	0.9.5.92
-Release:	3
+Release:	4
 Summary:	Compiz Config Settings Manager
 Group:		System/X11
 URL:		https://www.compiz.org/
